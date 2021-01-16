@@ -2,6 +2,11 @@ body {
   background-color: rgb(9, 9, 14);
 }
 
+.game {
+  margin: 0 auto;
+  width: 400px;
+}
+
 .game__title {
   font-size: 36px;
   text-align: center;
