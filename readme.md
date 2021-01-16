@@ -1,3 +1,3 @@
-# Игра Пятнашки
+# Игра «Пятнашки»
 
-Демо [](https://feininger.github.io/Game-15/)
+Демо [feininger.github.io/Game-15/](https://feininger.github.io/Game-15/)
