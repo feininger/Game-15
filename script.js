@@ -5,7 +5,7 @@ let items;
 checkStorage();
 addGameItems(numbers);
 
-function moveItem (evt) {
+function moveItem(evt) {
   if (isCanMove(this)) {
     changeItem (this);
     removeGameItems();
@@ -13,11 +13,9 @@ function moveItem (evt) {
   } 
 };
 
-function isCanMove (obj) {
+function isCanMove(obj) {
   let zeroIndex = numbers.indexOf(0);
   let index = numbers.indexOf(parseInt(obj.textContent));
-  //console.log('indexOf:' + index);
-  //console.log('zeroIndex:' + zeroIndex);
 
   switch (index) {
     case index = zeroIndex + 1: return true;
@@ -28,7 +26,7 @@ function isCanMove (obj) {
   }
 };
 
-function changeItem (obj) {
+function changeItem(obj) {
   let zeroIndex = numbers.indexOf(0);
   let index = numbers.indexOf(parseInt(obj.textContent));
   numbers[zeroIndex] = numbers[index];
@@ -67,7 +65,7 @@ function addGameItems(numbers) {
   items.forEach(function (item) {
       item.addEventListener('click', moveItem);
   });
-}
+};
 
 function removeGameItems() {
   for (let i = gameBox.children.length -1 ; i >= 0; i--) {
