@@ -1,4 +1,5 @@
 let gameBox = document.querySelector('.game__box');
+let mixButton = document.querySelector('.game__bnt-mix');
 let numbers = generateArray();
 let items;
 
@@ -73,6 +74,12 @@ function removeGameItems() {
   }
 };
 
+function mixGameItems() {
+  numbers = generateArray();
+  removeGameItems();
+  addGameItems(numbers);
+};
+
 function setStorage() {
   localStorage.setItem('tagGameStorage', JSON.stringify(numbers)); 
 };
@@ -82,3 +89,5 @@ function checkStorage() {
     numbers = JSON.parse(localStorage.getItem('tagGameStorage'));
   }
 };
+
+mixButton.addEventListener('click', mixGameItems);

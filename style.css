@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: rgb(9, 9, 14);
 }
@@ -7,11 +12,45 @@ body {
   width: 400px;
 }
 
+.game__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .game__title {
+  display: inline-block;
   font-size: 36px;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: rgb(255, 174, 0);
+}
+
+.game__bnt-mix {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(127, 236, 94);
+  background-image:  url(images/two-arrows.svg);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border: none;
+}
+
+.game__bnt-mix:hover {
+  background-color: rgb(127, 236, 94, .8);
+}
+
+.game__bnt-mix:active {
+  background-color: rgb(127, 236, 94, .5);
+}
+
+.game__bnt-mix:focus {
+  outline: none;
 }
 
 .game__box {
