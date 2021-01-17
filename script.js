@@ -2,6 +2,7 @@ let gameBox = document.querySelector('.game__box');
 let numbers = generateArray();
 let items;
 
+checkStorage();
 addGameItems(numbers);
 
 function moveItem (evt) {
@@ -58,6 +59,7 @@ function addGameItems(numbers) {
     if (item === 0) {newElement.classList.add('zero-item')}
     newElement.innerHTML = item;
     gameBox.appendChild(newElement);
+    setStorage();
   });
 
   items = document.querySelectorAll('.game__item');
@@ -70,5 +72,15 @@ function addGameItems(numbers) {
 function removeGameItems() {
   for (let i = gameBox.children.length -1 ; i >= 0; i--) {
     gameBox.children[i].remove();
+  }
+};
+
+function setStorage() {
+  localStorage.setItem('tagGameStorage', JSON.stringify(numbers)); 
+};
+
+function checkStorage() {
+  if (localStorage.getItem('tagGameStorage')) {
+    numbers = JSON.parse(localStorage.getItem('tagGameStorage'));
   }
 };
