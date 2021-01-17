@@ -60,7 +60,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(83, 83, 83);
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 .game__item {
@@ -72,7 +72,7 @@ body {
   background-color: rgb(222, 230, 159);
   /* border: rgb(135, 148, 35) solid 1px; */
   border: rgba(165, 42, 42, 0.3) solid 1px;
-  border-radius: 12px;
+  border-radius: 6px;
   color: brown;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 50px;
